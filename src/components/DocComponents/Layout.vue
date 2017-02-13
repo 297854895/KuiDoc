@@ -4,7 +4,7 @@
     <hr>
     <h4><i class="fa fa-link doc-icon"></i>行(k-row)</h4>
     <div class="doc-indent">
-      <h5>介绍</h5>
+      <h5>简介</h5>
       <p class="doc-p">k-row将会占据一整行，宽度为当前容器宽度的100%。</p>
       <h5>示例</h5>
       <k-code :code="this.code_0" type="html"></k-code>
@@ -17,7 +17,7 @@
     </div>
     <h4><i class="fa fa-link doc-icon"></i>列(k-col)</h4>
     <div class="doc-indent">
-      <h5>介绍</h5>
+      <h5>简介</h5>
       <p class="doc-p">
         k-col需放置于k-row组件内，Kui默认地将k-row均分为12等份，所以k-col接受span属性，以制定该列在k-row中的宽度占比。若一个k-row中所有k-col的span属性之和大于12，则多出的列将会换行。
       </p>
@@ -26,12 +26,13 @@
           :head="[
             {text: '属性', dataIndex: 'attr'},
             {text: '类型', dataIndex: 'type'},
-            {text: '说明', dataIndex: 'des'}
+            {text: '说明', dataIndex: 'des'},
+            {text: '默认', dataIndex: 'def'}
           ]"
           :data="[
-            {attr: 'span', type: 'String', des: '占据当前行多少等份（一行默认分为12等份）'},
-            {attr: 'left', type: 'String', des: '当前列左边距，1代表1等份'},
-            {attr: 'right', type: 'String', des: '当前列右边距，1代表1等份'}
+            {attr: 'span', type: 'String', des: '占据当前行多少等份（一行默认分为12等份）', def: ''},
+            {attr: 'left', type: 'String', des: '当前列左边距，1代表1等份', def: ''},
+            {attr: 'right', type: 'String', des: '当前列右边距，1代表1等份', def: ''}
           ]"
           :options="{
               headColor: '#888',
