@@ -142,7 +142,7 @@
     }
   }
 </script>
-<style scoped>
+<style>
   .doc{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -167,5 +167,46 @@
   .doc-div{
     padding: 20px 20px 100px 30px;
     background: #fff;
+  }
+  h2{
+    font-size: 26px;
+    font-weight: normal;
+    text-align: left;
+  }
+  hr{
+    height: 1px;
+    border: none;
+    background-color: #ddd;
+  }
+  h4{
+    color: #444;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  pre{
+    overflow-x: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .doc-icon{
+    margin-right: 16px;
+    font-size: 16px;
+  }
+  .doc-indent{
+    padding-left: 32px;
+  }
+  h5{
+    color: #444;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .doc-p{
+    font-size: 14px;
+    text-indent: 2em;
+    color: #666;
+  }
+  .doc-div-clear{
+    height: 0px;
+    clear: both;
   }
 </style>

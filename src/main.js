@@ -11,4 +11,4 @@ new Vue({
   store,
   template: '<Index/>',
   components: { Index }
-})
+});
