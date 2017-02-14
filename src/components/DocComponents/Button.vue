@@ -30,59 +30,91 @@
               headBgColor: '#e0e0e0'
             }"
           ></k-table>
-      <h5>圆角示例</h5>
-      <k-code :code="this.code_0" type="html"></k-code>
-      <h5>圆角演示</h5>
-      <k-button>有圆角</k-button>
-      <k-button radius='false'>无圆角</k-button>
-      <h5>尺寸示例</h5>
+      <h5>类型示例</h5>
       <k-code :code="this.code_1" type="html"></k-code>
+      <h5>类型演示</h5>
+      <k-button type="default">示例</k-button>
+      <k-button type="info">示例</k-button>
+      <k-button type="primary">示例</k-button>
+      <k-button type="success">示例</k-button>
+      <k-button type="warning">示例</k-button>
+      <k-button type="danger">示例</k-button>
+      <k-button type="text">示例</k-button>
+      <h5>尺寸示例</h5>
+      <k-code :code="this.code_2" type="html"></k-code>
       <h5>尺寸演示</h5>
       <k-button size="large">大尺寸</k-button>
       <k-button size="normal">普通尺寸</k-button>
       <k-button size="small">小尺寸</k-button>
       <k-button size="mini">超小尺寸</k-button>
+      <h5>圆角示例</h5>
+      <k-code :code="this.code_0" type="html"></k-code>
+      <h5>圆角演示</h5>
+      <k-button>有圆角</k-button>
+      <k-button radius='false'>无圆角</k-button>
+      <h5>Width示例</h5>
+      <k-code :code="this.code_5" type="html"></k-code>
+      <h5>Width演示</h5>
+      <k-button type="danger" size="large" width="300px">示例</k-button>
+      <h5>禁用示例</h5>
+      <k-code :code="this.code_3" type="html"></k-code>
+      <h5>禁用演示</h5>
+      <k-button type="danger" status="disable">示例</k-button>
+      <h5>Icon示例</h5>
+      <k-code :code="this.code_4" type="html"></k-code>
+      <h5>Icon演示</h5>
+      <k-button iconBefore="fa fa-heart">示例</k-button>
+      <k-button iconAfter="fa fa-chrome">示例</k-button>
+      <h5>回调示例</h5>
+      <k-code :code="this.code_6"></k-code>
+      <h5>回调演示</h5>
+      <k-button :callBack="this.clickCallBack">+1</k-button><span class="num-show">{{Num}}</span>
+      <div style="height:20px;clear:both"></div>
     </div>
-    <div style="height:20px;clear:both"></div>
-    <k-button>示例</k-button>
-    <div style="height:20px;clear:both"></div>
-    <div style="height:20px;clear:both"></div>
-    <k-button>示例</k-button>
-    <k-button type="info">示例</k-button>
-    <k-button type="primary">示例</k-button>
-    <k-button type="success">示例</k-button>
-    <k-button type="warning">示例</k-button>
-    <k-button type="danger">示例</k-button>
-    <k-button type="text">示例</k-button>
-    <k-button type="danger" status="disable">示例</k-button>
-    <div style="height:20px;clear:both"></div>
-    <k-button iconBefore="fa fa-heart" :callBack="this.clickCallBack">示例</k-button>
-    <k-button iconAfter="fa fa-chrome">示例</k-button>
-    <div style="height:20px;clear:both"></div>
-    <k-button type="danger" size="large" width="300px">示例</k-button>
   </div>
 </template>
 <script>
   export default{
     data() {
       return {
+        Num: 0,
         code_0:
 `<k-button>有圆角</k-button>
 <k-button radius="false">无圆角</k-button>`,
         code_1:
+`<k-button type="default">示例</k-button>
+<k-button type="info">示例</k-button>
+<k-button type="primary">示例</k-button>
+<k-button type="success">示例</k-button>
+<k-button type="warning">示例</k-button>
+<k-button type="danger">示例</k-button>
+<k-button type="text">示例</k-button>`,
+        code_2:
 `<k-button size="large">大尺寸</k-button>
 <k-button size="normal">普通尺寸</k-button>
 <k-button size="small">小尺寸</k-button>
-<k-button size="mini">超小尺寸</k-button>`
+<k-button size="mini">超小尺寸</k-button>`,
+        code_3:
+`<k-button type="danger" status="disable">示例</k-button>`,
+        code_4:
+`<k-button iconBefore="fa fa-heart">示例</k-button>
+<k-button iconAfter="fa fa-chrome">示例</k-button>`,
+        code_5:
+`<k-button type="danger" size="large" width="300px">示例</k-button>`,
+        code_6:
+`<k-button :callBack="this.clickCallBack">+1</k-button><span class="num-show">{{Num}}</span>`
       }
     },
     methods: {
       clickCallBack() {
-        console.log('Button click');
+        this.$data.Num += 1;
       }
     }
   }
 </script>
 <style scoped>
-
+  .num-show{
+    padding: 0 12px;
+    color: #666;
+  }
 </style>
