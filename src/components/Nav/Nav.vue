@@ -1,7 +1,7 @@
 <template>
   <k-nav type="dark" backgroundColor="#222" navBorderColor="#111" navHoverColor="#eee" navHoverBgColor="#111">
     <span slot="left">
-      <img src="/static/img/logo.png" style="height:26px;" /><label style="font-size:18px;font-weight:bold;margin-left: 10px;">Xxx</label>
+      <img src="/static/img/logo.png" style="height:26px;" /><label style="font-size:18px;font-weight:bold;margin-left: 10px;">Kui</label>
     </span>
     <ul slot="right">
       <li class="k-nav-current">Home</li>
