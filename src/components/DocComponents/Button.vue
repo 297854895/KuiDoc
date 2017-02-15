@@ -5,7 +5,7 @@
     <h4><i class="fa fa-link doc-icon"></i>按钮(k-button)</h4>
     <div class="doc-indent">
       <h5>简介</h5>
-      <p class="doc-p">k-button将创建一个按钮，并接受参数以设置按钮的样式以及回调方法。</p>
+      <p class="doc-p">k-button将创建一个按钮，接受参数以设置按钮的样式以及回调方法。</p>
       <h5>参数</h5>
       <k-table
           :head="[
@@ -67,8 +67,10 @@
       <k-button iconAfter="fa fa-chrome">示例</k-button>
       <h5>回调示例</h5>
       <k-code :code="this.code_6"></k-code>
+      <k-code :code="this.code_7"></k-code>
       <h5>回调演示</h5>
-      <k-button :callBack="this.clickCallBack">+1</k-button><span class="num-show">{{Num}}</span>
+      <k-button :callBack="this.clickCallBack">+1</k-button>
+      <span class="num-show">Num:{{Num}}</span>
       <div style="height:20px;clear:both"></div>
     </div>
   </div>
@@ -102,7 +104,20 @@
         code_5:
 `<k-button type="danger" size="large" width="300px">示例</k-button>`,
         code_6:
-`<k-button :callBack="this.clickCallBack">+1</k-button><span class="num-show">{{Num}}</span>`
+`<k-button :callBack="this.clickCallBack">+1</k-button>
+<span class="num-show">Num:{{Num}}</span>`,
+        code_7:
+`export default{
+  data() {
+    return {
+      Num: 0
+    }
+  methods: {
+    clickCallBack() {
+      this.$data.Num += 1;
+    }
+  }
+}`
       }
     },
     methods: {

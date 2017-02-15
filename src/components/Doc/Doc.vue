@@ -209,4 +209,10 @@
     height: 0px;
     clear: both;
   }
+  .k-alert{
+    margin: 20px 0;
+  }
+  .k-alert p{
+    text-indent: 0px;
+  }
 </style>

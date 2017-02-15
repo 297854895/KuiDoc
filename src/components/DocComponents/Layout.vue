@@ -19,7 +19,8 @@
     <div class="doc-indent">
       <h5>简介</h5>
       <p class="doc-p">
-        k-col需放置于k-row组件内，Kui默认地将k-row均分为12等份，所以k-col接受span属性，以制定该列在k-row中的宽度占比。若一个k-row中所有k-col的span属性之和大于12，则多出的列将会换行。
+        k-col需放置于k-row组件内，Kui默认地将k-row均分为12等份，所以k-col接受span属性，以制定该列在k-row中的宽度占比。
+        <k-alert type="warning">注：若一个k-row中所有k-col的span属性之和大于12，则多出的列将会换行。</k-alert>
       </p>
       <h5>参数</h5>
       <k-table
