@@ -14,8 +14,8 @@
           :head="[
             {text: '属性', dataIndex: 'attr'},
             {text: '类型', dataIndex: 'type'},
-            {text: '说明', dataIndex: 'des'},
-            {text: '默认', dataIndex: 'def'}
+            {text: '默认', dataIndex: 'def'},
+            {text: '说明', dataIndex: 'des'}
           ]"
           :data="[
             {attr: 'radius', type: 'String', des: '设置是否有圆角，可选值：true，false', def: 'true'}

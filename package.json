@@ -2,7 +2,7 @@
   "name": "vue2",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "Kecheng Zhu <kecheng.zhu@socialcredits.cn>",
+  "author": "zkc",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

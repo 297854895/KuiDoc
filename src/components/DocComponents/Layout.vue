@@ -27,8 +27,8 @@
           :head="[
             {text: '属性', dataIndex: 'attr'},
             {text: '类型', dataIndex: 'type'},
-            {text: '说明', dataIndex: 'des'},
-            {text: '默认', dataIndex: 'def'}
+            {text: '默认', dataIndex: 'def'},
+            {text: '说明', dataIndex: 'des'}
           ]"
           :data="[
             {attr: 'span', type: 'String', des: '占据当前行多少等份（一行默认分为12等份）', def: ''},

@@ -11,8 +11,8 @@
           :head="[
             {text: '属性', dataIndex: 'attr'},
             {text: '类型', dataIndex: 'type'},
-            {text: '说明', dataIndex: 'des'},
-            {text: '默认', dataIndex: 'def'}
+            {text: '默认', dataIndex: 'def'},
+            {text: '说明', dataIndex: 'des'}
           ]"
           :data="[
             {attr: 'status', type: 'String', des: '设置状态，可选值：true，false', def: 'false'},
