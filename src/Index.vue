@@ -12,7 +12,6 @@
   import Aside from './components/Aside/Aside';
   import Doc from './components/Doc/Doc';
   import Center from './components/Center/Center';
-
   export default {
     components: {
       'KNav': Nav,
