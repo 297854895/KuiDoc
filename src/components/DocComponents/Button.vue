@@ -20,8 +20,8 @@
             {attr: 'radius', type: 'String', des: '设置是否有圆角，可选值：true，false', def: 'true'},
             {attr: 'width', type: 'String', des: '设置按钮宽度，接受单位为px的字符串', def: ''},
             {attr: 'status', type: 'String', des: '设置按钮状态，可选值为：disable，enable', def: 'enable'},
-            {attr: 'iconBefore', type: 'String', des: '设置按钮左边的icon，基于font-awesome字体图标，格式如：fa fa-xxx', def: ''},
-            {attr: 'iconAfter', type: 'String', des: '设置按钮右边的icon，基于font-awesome字体图标，格式如：fa fa-xxx', def: ''},
+            {attr: 'iconBefore', type: 'String', des: '设置按钮左边的icon，采用font-awesome字体图标，格式如：fa fa-xxx', def: ''},
+            {attr: 'iconAfter', type: 'String', des: '设置按钮右边的icon，采用font-awesome字体图标，格式如：fa fa-xxx', def: ''},
             {attr: 'callBack', type: 'Function', des: '设置按钮的回调方法', def: ''},
             {attr: 'set', type: 'Obejct', des: '设置按钮的参数对象', def: ''},
           ]"

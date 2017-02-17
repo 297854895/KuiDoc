@@ -30,6 +30,10 @@
       <h5>基本演示</h5>
       <p class="doc-p">当前switch状态为：{{this.$data.switch_1 ? '开启' : '关闭'}}</p>
       <k-switch :callBack="switchCallBack"></k-switch>
+      <h5>禁用示例</h5>
+      <k-code :code="this.code_4" type="html"></k-code>
+      <h5>禁用演示</h5>
+      <k-switch disable="true"></k-switch>
       <h5>异步回调示例</h5>
       <k-code :code="this.code_2" type="html"></k-code>
       <k-code :code="this.code_3" type="javascript"></k-code>
@@ -46,6 +50,7 @@
       return {
         switch_1: false,
         switch_2: false,
+        switch_2timer: '',
         code_0:
 `<p>当前switch状态为：{{this.$data.switch_1 ? '开启' : '关闭'}}</p>
 <k-switch></k-switch>`,
@@ -55,7 +60,7 @@
     return {
       switch_1: false
     }
-  }
+  },
   methods: {
     witchCallBack(status, fn) {
       this.$data.switch_1 = status;
@@ -63,6 +68,8 @@
     }
   }
 }`,
+        code_4:
+`<k-switch disable="true"></k-switch>`,
         code_2:
 `<p>当前switch状态为：{{this.$data.switch_2 ? '开启' : '关闭'}}</p>
 <k-switch></k-switch>`,
@@ -70,16 +77,21 @@
 `export default{
   data() {
     return {
-      switch_2: false
+      switch_2: false,
+      switch_2timer: ''
     }
-  }
+  },
   methods: {
     witchCallBack_(status, fn) {
       this.$data.switch_2 = status;
-      setTimeout(() => {
+      if (this.$data.switch_2timer) {
+        clearTimeout(this.$data.switch_2timer);
+      }
+      this.$data.switch_2timer = setTimeout(() => {
         this.$data.switch_2 = !this.$data.switch_2;
-        fn(this.$data.swicth_2);
-      }, 2000);
+        fn(this.$data.switch_2);
+        this.$data.switch_2timer = '';
+      }, 1500);
     }
   }
 }`
@@ -92,10 +104,14 @@
       },
       switchCallBack_(status, fn) {
         this.$data.switch_2 = status;
-        setTimeout(() => {
+        if (this.$data.switch_2timer) {
+          clearTimeout(this.$data.switch_2timer);
+        }
+        this.$data.switch_2timer = setTimeout(() => {
           this.$data.switch_2 = !this.$data.switch_2;
           fn(this.$data.switch_2);
-        }, 2000);
+          this.$data.switch_2timer = '';
+        }, 1500);
       }
     }
   }

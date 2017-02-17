@@ -21,7 +21,7 @@
       'KCenter': Center
     },
     mounted() {
-      this.$router.push({ path: 'layout' });
+      this.$router.push({ path: 'layout' })
     }
   }
 </script>

@@ -1,5 +1,9 @@
 <template>
-  <k-nav type="dark" backgroundColor="#222" navBorderColor="#111" navHoverColor="#eee" navHoverBgColor="#111">
+  <k-nav
+      scrollDOM=".doc-container"
+      :scrollChange="[
+        {scrollTop: 500, type: 'dark', backgroundColor: '#ff4949', navBorderColor: '#cc3333', navHoverColor: '#fff', navHoverBgColor: '#cc3333'},
+      ]" type="dark" backgroundColor="#222" navBorderColor="#111" navHoverColor="#eee" navHoverBgColor="#111">
     <span slot="left">
       <img src="/static/img/logo.png" style="height:26px;" /><label style="font-size:18px;font-weight:bold;margin-left: 10px;">Kui</label>
     </span>
