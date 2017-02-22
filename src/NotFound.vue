@@ -1,6 +1,6 @@
 <template>
   <div id="NotFound">
-    this is NotFound
+    NotFound this page!
   </div>
 </template>
 <script>
